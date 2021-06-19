@@ -1,0 +1,109 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font: 14px/1.5 Helvetica Neue, Helvetica, Arial, Microsoft Yahei,
+    Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+/* 轮播图的左右点击与左列表出现无法点击 */
+.banner{
+    margin: auto;
+    position: relative;/*相对定位 给绝对定位位置参考*/
+    width: 1226px;
+    height: 470px;
+    z-index: 1;
+}
+.banner .item{
+    display: none;/*隐藏元素*/
+    position: absolute;/* 绝对定位*/
+    top: 0;
+    left: 0;
+
+}
+.banner img{
+    width: 1226px;
+    height: 470px;
+}
+.banner ul{
+    list-style-type: none;/*清除默认列表样式 ....*/
+    margin: 0;
+    padding: 0;/*内外编剧清除*/
+}
+.lunbo{
+    width: 100%;
+    height: 300px;
+}
+/*左右按钮的属性设置*/
+.lr-tab .btn{
+    position: absolute;
+    top: 200px;
+    width: 410px;
+    height: 69px;
+}
+.lr-tab .left{
+    left: 233px;
+    width: 40px;
+    height: 60px;
+
+    background: url("../../icon/hm_arrow_left_light.png") no-repeat;
+    background-size: 35px 40px;
+    background-position: 0px;
+    opacity: .5;
+}
+.lr-tab .right{
+
+    right: 0px;
+    width: 40px;
+    height: 60px;
+  
+    background: url("../../icon/hm_arrow_right_light.png") no-repeat;
+    background-size: 35px 40px;
+    background-position: 0px;
+    opacity: .5;
+    
+}
+/*左右按钮触碰事件*/
+.lr-tab .left:hover{
+    background-color: #536475;
+    opacity: .5;
+    border-radius: 0px 10px 10px 0px;
+}
+.lr-tab .right:hover{
+    background-color: #536475;
+    opacity: .5;
+    border-radius: 0px 10px 10px 0px;
+}
+/*圆形按钮属性设定*/
+.tab-btn{
+    position: absolute;
+    top: 435px;
+    right: 40px;
+    width: 80px;
+    height: 30px;
+}
+.tab-btn .btn{
+    float: left;
+    width: 4px;
+    height: 4px;
+    background: #868686;
+    border: 2px solid #757575;/*边框*/
+    margin-left: 10px;
+    border-radius: 50%;
+ }
+/*圆形按钮触碰事件*/
+.tab-btn .btn:hover{
+    background: #ffffff;
+    border-color:#757575;
+}
+.tab-btn .active{
+    background: #ffffff;
+    border-color:#757575;;
+}

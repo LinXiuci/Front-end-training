@@ -1,0 +1,36 @@
+#header-Redmi-iphone{
+    height: 230px;
+    margin: auto;
+}
+#header-Redmi-iphone-li{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+}
+#header-Redmi-iphone-li a{
+    width: 204px;
+    height: 201px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+    font-size: 13px;
+}
+
+#header-Redmi-iphone-li img{
+    display: block;
+    margin:auto;
+    transform: translateY(20px);
+}
+#header-Redmi-iphone-li p{
+    position: relative;
+    top: 10px;
+  
+}
+#header-Redmi-iphone-li span{
+    position: relative;
+    top: 10px;
+    color: #ff6700;
+    font-size: 12px;
+}

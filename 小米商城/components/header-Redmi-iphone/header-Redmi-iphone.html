@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redmi 红米</title>
+    <link rel="stylesheet" href="../../index/index.css">
+    <link rel="stylesheet" href="./header-Redmi-iphone.css">
+</head>
+<body>
+    <ul id="header-Redmi-iphone">
+        <li id="header-Redmi-iphone-li"></li>
+    </ul>
+</body>
+</html>
+
+<script>
+    var arrs=[
+        {
+            title:"Note 10 Pro",
+            price:"1599元起",
+            img:"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/e3c5d99c28700a3c45ea65eebbea0a04.png?thumb=1&w=160&h=110&f=webp&q=90",
+        },
+        {
+            title:"Redmi Note 10 5G",
+            price:"999元起",
+            img:"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/88bb84ff06f0ab467b859aeed36b817a.png?thumb=1&w=160&h=110&f=webp&q=90",
+        },
+        {
+            title:"K40 游戏增强版",
+            price:"1999元起",
+            img:"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/acd0f27496ccdf81ef42124c35e8bfc4.png?thumb=1&w=160&h=110&f=webp&q=90",
+        },
+        {
+            title:"K40 Pro 系列",
+            price:"2499元起",
+            img:"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/d07671f25a2b3a6c3d4fac189f28fbe9.png?thumb=1&w=160&h=110&f=webp&q=90",
+        },
+        {
+            title:"Redmi K40",
+            price:"1999元起",
+            img:"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ecebd50c7840bb03d7b5e3bfe4d439c2.png?thumb=1&w=160&h=110&f=webp&q=90",
+        },
+        {
+            title:"Redmi Note 9 系列",
+            price:"899元起",
+            img:"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/584add2c9cfdb9eefe7b642bf191773a.png?thumb=1&w=160&h=110&f=webp&q=90",
+        },
+    ];
+    var arrprint="";
+    arrs.forEach(e=>{
+        arrprint+=`
+        
+            <li id="header-Redmi-iphone-li">
+                <a href="#">
+                    <img src=${e.img} alt=${e.title}>
+                    <p>${e.title}</p>
+                    <span>${e.price}</span>
+                </a>
+            </li>
+            <hr size='80' width='.5' color='#F4F6F6 '>
+        `
+    })
+    document.getElementById('header-Redmi-iphone-li').innerHTML=arrprint;
+</script>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header</title>
+    <link rel="stylesheet" href="../index/index.css">
+    <link rel="stylesheet" href="./header.css">
+    <script src="https://at.alicdn.com/t/font_2609419_yk1s36x0m9.js"></script>
+    <script src="../index/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <header id="header-menu">
+        <ul class="header-menu-ul">
+            <li ><a href=""><img id="LOGO" src="https://s02.mifile.cn/assets/static/image/logo-mi2.png" alt=""></a></li>
+
+            <li class="header-menu-li">
+                <span class="header-iphone-span">小米手机</span>
+                <article id="header-xiaomi-iphone"></article>  
+                <link rel="stylesheet" href="../components/header-xiaomi-iphone/header-xiaomi-iphone.css">
+                <script>
+                    $(document).ready(function(){
+                        $('#header-xiaomi-iphone').load('../components/header-xiaomi-iphone/header-xiaomi-iphone.html');
+                    })
+                </script>           
+            </li>
+            <li class="header-menu-li">
+                <span class="header-iphone-span">Redmi 红米</span>
+                <section class="header-Redmi-iphone"></section>
+                <link rel="stylesheet" href="../components/header-Redmi-iphone/header-Redmi-iphone.css">
+                <script>
+                    $(document).ready(function () {
+                        $('.header-Redmi-iphone').load('../components/header-Redmi-iphone/header-Redmi-iphone.html');
+                    })
+                </script>
+            </li class="header-menu-li">
+            <li class="header-menu-li">
+                <span class="header-iphone-span">电视</span>
+            </li>
+            <li class="header-menu-li">
+                <span class="header-iphone-span">笔记本</span>
+            </li>
+            <li class="header-menu-li">
+                <span class="header-iphone-span">家电</span>
+            </li>
+            <li class="header-menu-li">
+                <span class="header-iphone-span">路由器</span>
+            </li>
+            <li class="header-menu-li">
+                <span class="header-iphone-span">智能硬件</span>
+                <div id="header-intelligent-hardware"></div>
+            </li>
+            <li class="header-menu-li">
+                <span class="header-iphone-span">服务</span>
+            </li>
+            <li class="header-menu-li">
+                <span class="header-iphone-span">社区</span>
+            </li>
+
+            <li>     
+                <form id="header-form" method="GET" action="#">
+                    <input id="search" type="search" placeholder="空调">
+                    <button id="header-button">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-search"></use>
+                        </svg>
+                    </button>
+                    <style type="text/css">
+                        .icon {
+                           width: 1.5em; height: 1.5em;
+                           vertical-align: -0.15em;
+                           fill: currentColor;
+                           overflow: hidden;
+                        }
+                    </style>
+                </form>
+            </li>
+        </ul>
+    </header>
+</body>
+</html>
