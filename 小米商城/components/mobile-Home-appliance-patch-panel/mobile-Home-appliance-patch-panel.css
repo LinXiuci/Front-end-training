@@ -1,0 +1,35 @@
+#mobile-Home-appliance-patch-panel{
+    /*  border: 1px solid rebeccapurple; */
+     width: 995px;
+     height: 470px;
+ }
+ 
+ #mobile-Home-appliance-patch-panel-ul{
+     display: grid;
+     grid-template-columns: repeat(4,248px);
+     grid-template-rows: repeat(6,65px);
+     /* border: 1px solid red; */
+ }
+ #mobile-Home-appliance-patch-panel-ul li{
+     display: flex;
+     align-items: center;
+ }
+ #mobile-Home-appliance-patch-panel-ul a{
+     color: #757575;
+     font-size: 14px;
+ }
+ #mobile-Home-appliance-patch-panel-ul span{
+     display: inline-block;
+     transform: translateY(-10px);
+     text-indent: 15px;
+ }
+ #mobile-Home-appliance-patch-panel-ul img{
+     display: inline-block;
+     transform: translate(5px,3px);
+     /* border: #757575 1px solid; */
+ }
+
+ #mobile-Home-appliance-patch-panel :hover{
+    color: #ff6700;
+    transition: all .5s;
+ }

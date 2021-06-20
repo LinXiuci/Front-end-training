@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电源 配件</title>
+    <link rel="stylesheet" href="../../index/index.css">
+    <link rel="stylesheet" href="./mobile-Power-accessories.css">
+</head>
+
+<body>
+    <section id="mobile-Power-accessories">
+        <ul id="mobile-Power-accessories-ul"></ul>
+    </section>
+</body>
+
+</html>
+
+<script>
+    var arrs = [
+        {
+            img: "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/8c55361386a46857f962e5142baeefcf.png?thumb=1&w=40&h=40&f=webp&q=90",
+            title: "移动电源",
+            connect: "#",
+        },
+        {
+            img: "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/45dd7a2c4fc3d17d5d261ed3eed7cd15.jpg?thumb=1&w=40&h=40",
+            title: "数据线",
+            connect: "#",
+        },
+        {
+            img: "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/397d8119508e8e3c895fc30ece88e799.jpg?thumb=1&w=40&h=40",
+            title: "车充",
+            connect: "#",
+        },
+        {
+            img: "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/864bcd18999a7b0fe22365f7ea7909e0.png?thumb=1&w=40&h=40&f=webp&q=90",
+            title: "充电器",
+            connect: "#",
+        },
+        {
+            img: "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/10ec831749f1c657fc0a494feab15ed4.jpg?thumb=1&w=40&h=40",
+            title: "电池",
+            connect: "#",
+        },
+        {
+            img: "https://cdn.cnbj0.fds.api.mi-img.com/b2c-mimall-media/2725e04c955dc060ac142fabbf809c1e.jpg?thumb=1&w=40&h=40",
+            title: "自拍杆",
+            connect: "#",
+        },
+    ];
+    var card_print = "";
+    arrs.forEach(e => {
+        card_print += `
+            <ul id="mobile-Power-accessories-ul">
+                <li>
+                    <a href=${e.connect} >
+                        <img src=${e.img} alt=${e.title}>
+                        <span>${e.title}</span>
+                    </a>
+                </li>
+            </ul>
+        `
+    })
+    document.getElementById('mobile-Power-accessories-ul').innerHTML = card_print;
+</script>

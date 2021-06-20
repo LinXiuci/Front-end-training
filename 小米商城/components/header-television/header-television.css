@@ -1,0 +1,36 @@
+#header-television{
+    height: 230px;
+    margin: auto;
+}
+#header-television-li{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+}
+#header-television-li a{
+    width: 204px;
+    height: 201px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+    font-size: 13px;
+}
+
+#header-television-li img{
+    display: block;
+    margin:auto;
+    transform: translateY(20px);
+}
+#header-television-li p{
+    position: relative;
+    top: 10px;
+  
+}
+#header-television-li span{
+    position: relative;
+    top: 10px;
+    color: #ff6700;
+    font-size: 12px;
+}

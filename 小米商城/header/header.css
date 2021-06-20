@@ -1,0 +1,89 @@
+#LOGO{
+    width: 56px;
+    height: 56px;
+}
+
+#header-menu{
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-menu-ul{
+    border: 1px solid red;
+    width: 1226px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-menu-ul .header-iphone-span{
+    padding: 10px;
+    display: block;
+    min-width: 50px;
+    min-height: 80px;
+    line-height: 80px;
+    text-align: center;
+    
+}
+.header-menu-ul .header-iphone-span:hover{
+    color: #ff6700;
+}
+
+
+
+
+/* 搜索框 */
+#header-form{
+    position: relative;
+    border: #000 1px solid;
+
+    display: flex;
+    justify-content: center;
+}
+
+#header-form #search{
+    width: 254px;
+    height: 50px;
+    text-indent: 10px;
+    border: 0;
+    outline: none;
+}
+
+#header-form #header-button{
+    width: 52px;
+    height: 50px;
+    border: 0;
+    border-left: 1px solid;
+    background: #fff;
+}
+
+#header-form #header-button:hover{
+    background-color: #ff6700;
+}
+
+
+
+
+#header-xiaomi-iphone,#header-Redmi-iphone,#header-television{
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 111;
+    background-color: #fff;
+    box-shadow: -1px 0px 5px -1px rgb(121, 121, 121) ;
+}
+.header-menu-ul .header-menu-li:hover #header-xiaomi-iphone{
+   
+    display: block;
+}
+.header-menu-ul .header-menu-li:hover #header-Redmi-iphone{
+   
+    display: block;
+}
+.header-menu-ul .header-menu-li:hover #header-television{
+   
+    display: block;
+}

@@ -1,0 +1,35 @@
+#moblic-Travel-wear{
+    /*  border: 1px solid rebeccapurple; */
+     width: 995px;
+     height: 470px;
+ }
+ 
+ #moblic-Travel-wear-ul{
+     display: grid;
+     grid-template-columns: repeat(4,248px);
+     grid-template-rows: repeat(6,65px);
+     /* border: 1px solid red; */
+ }
+ #moblic-Travel-wear-ul li{
+     display: flex;
+     align-items: center;
+ }
+ #moblic-Travel-wear-ul a{
+     color: #757575;
+     font-size: 14px;
+ }
+ #moblic-Travel-wear-ul span{
+     display: inline-block;
+     transform: translateY(-10px);
+     text-indent: 15px;
+ }
+ #moblic-Travel-wear-ul img{
+     display: inline-block;
+     transform: translate(5px,3px);
+     /* border: #757575 1px solid; */
+ }
+
+ #moblic-Travel-wear :hover{
+    color: #ff6700;
+    transition: all .5s;
+ }

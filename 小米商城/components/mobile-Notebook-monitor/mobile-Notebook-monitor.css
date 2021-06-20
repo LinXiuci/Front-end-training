@@ -1,0 +1,35 @@
+#mobile-Notebook-monitor{
+    /*  border: 1px solid rebeccapurple; */
+     width: 995px;
+     height: 470px;
+ }
+ 
+ #mobile-Notebook-monitor-ul{
+     display: grid;
+     grid-template-columns: repeat(4,248px);
+     grid-template-rows: repeat(6,65px);
+     /* border: 1px solid red; */
+ }
+ #mobile-Notebook-monitor-ul li{
+     display: flex;
+     align-items: center;
+ }
+ #mobile-Notebook-monitor-ul a{
+     color: #757575;
+     font-size: 14px;
+ }
+ #mobile-Notebook-monitor-ul span{
+     display: inline-block;
+     transform: translateY(-10px);
+     text-indent: 15px;
+ }
+ #mobile-Notebook-monitor-ul img{
+     display: inline-block;
+     transform: translate(5px,3px);
+     /* border: #757575 1px solid; */
+ }
+
+ #mobile-Notebook-monitor :hover{
+    color: #ff6700;
+    transition: all .5s;
+ }

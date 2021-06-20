@@ -1,0 +1,35 @@
+#mobile-Power-accessories{
+    /*  border: 1px solid rebeccapurple; */
+     width: 995px;
+     height: 470px;
+ }
+ 
+ #mobile-Power-accessories-ul{
+     display: grid;
+     grid-template-columns: repeat(4,248px);
+     grid-template-rows: repeat(6,65px);
+     /* border: 1px solid red; */
+ }
+ #mobile-Power-accessories-ul li{
+     display: flex;
+     align-items: center;
+ }
+ #mobile-Power-accessories-ul a{
+     color: #757575;
+     font-size: 14px;
+ }
+ #mobile-Power-accessories-ul span{
+     display: inline-block;
+     transform: translateY(-10px);
+     text-indent: 15px;
+ }
+ #mobile-Power-accessories-ul img{
+     display: inline-block;
+     transform: translate(5px,3px);
+     /* border: #757575 1px solid; */
+ }
+
+ #mobile-Power-accessories :hover{
+    color: #ff6700;
+    transition: all .5s;
+ }

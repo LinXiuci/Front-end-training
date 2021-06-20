@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>倒计时</title>
+    <script src="https://at.alicdn.com/t/font_2609419_leees8vps5a.js"></script>
+    <link rel="stylesheet" href="./count-down.css">
+    
+   <style>
+        #count-down{
+            width: 233.98px;
+            height: 340.23px;
+            background: #F1EDED;
+            font-size: 16px;
+            border: 1px solid rebeccapurple;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content:space-around;
+        }
+        #count-down-main{
+            border: 1px solid rebeccapurple;
+            display: flex;
+            flex-direction: row;
+            line-height: 45px;
+            justify-content: center;
+        }
+
+        #day,#hour,#minute,#second{
+            width: 35px;
+            height: 35px;
+            margin: 5px;
+            display: block;
+            background: #605751;
+            text-align: center;
+            line-height: 35px;
+            font-weight: 600;
+            color: aliceblue;
+        }
+        .count-down-title{
+            font-size: 21px;
+            color: #ef3a3b;
+            padding-top: 15px;
+        }
+        .count-down-desc{
+            color: rgba(0,0,0,.54);
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body onload="countTime()">
+    <section id="count-down">
+        
+        <div class="count-down-title">14:00 场</div>
+        
+        <svg class="icon-shandian" aria-hidden="true">
+            <use xlink:href="#icon-shandian"></use>
+        </svg>
+        <style type="text/css">
+            .icon-shandian {
+               width: 3.0em; height: 3.5em;
+               vertical-align: -0.15em;
+               fill: currentColor;
+               overflow: hidden;
+            }
+        </style>
+
+        <div class="count-down-desc">距离结束还有</div>
+
+        <div id="count-down-main">
+            <span id="day"></span>     :
+            <span id="hour"></span>    :
+            <span id="minute"></span>  :
+            <span id="second"></span>
+        </div>
+    </section>
+    <script>
+        function countTime() {
+            //获取当前时间
+            let date = new Date();
+            let now = date.getTime();
+            //设置截止时间
+            let enDate = new Date("2021-07-05 0:0:0");
+            let end = enDate.getTime();
+            //获取截止时间和当前时间的时间差
+            let leftTime = end - now;
+            //定义变量 d,h,m,s分别保存天数，小时，分钟，秒
+            var d, h, m, s;
+            if (leftTime >= 0) {
+
+                d = Math.floor(leftTime / 1000 / 60 / 60 / 24);
+                h = Math.floor(leftTime / 1000 / 60 / 60 % 24);
+                m = Math.floor(leftTime / 1000 / 60 % 60);
+                s = Math.floor(leftTime / 1000 % 60);
+            }
+            //将时间赋值到div中
+            //document.getElementById("day").innerHTML = d + "天";
+            document.getElementById("day").innerHTML = d ;
+            document.getElementById("hour").innerHTML = h ;
+            document.getElementById("minute").innerHTML = m;
+            document.getElementById("second").innerHTML = s;
+            //递归每秒调用countTime方法，显示动态时间效果
+            setTimeout(countTime, 1000);
+        }
+    </script>
+</body>
+
+</html>

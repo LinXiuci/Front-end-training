@@ -1,0 +1,35 @@
+#mobile_TV_box{
+    /*  border: 1px solid rebeccapurple; */
+     width: 995px;
+     height: 470px;
+ }
+ 
+ #mobile_TV_box-ul{
+     display: grid;
+     grid-template-columns: repeat(4,248px);
+     grid-template-rows: repeat(6,65px);
+     /* border: 1px solid red; */
+ }
+ #mobile_TV_box-ul li{
+     display: flex;
+     align-items: center;
+ }
+ #mobile_TV_box-ul a{
+     color: #757575;
+     font-size: 14px;
+ }
+ #mobile_TV_box-ul span{
+     display: inline-block;
+     transform: translateY(-10px);
+     text-indent: 15px;
+ }
+ #mobile_TV_box-ul img{
+     display: inline-block;
+     transform: translate(5px,3px);
+     /* border: #757575 1px solid; */
+ }
+
+ #mobile_TV_box :hover{
+    color: #ff6700;
+    transition: all .5s;
+ }
