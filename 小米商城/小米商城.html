@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小米商城</title>
+    <link rel="stylesheet" href="">
+    <script src="./index/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="./components/count-down/count-down.css">
+    <link rel="stylesheet" href="./components/xiaomi-seckill/xiaomi-seckill.css">
+
+
+    <script src="./components/count-down/count-down.js"></script>
+    <script src="https://at.alicdn.com/t/font_2609419_leees8vps5a.js"></script>
+
+
+
+    <style>
+        #index-main {
+            background: #f5f5f5;
+        }
+    </style>
+</head>
+
+<body onload="countTime()">
+    <!--  -->
+    <nav id="nav"></nav>
+    <link rel="stylesheet" type="text/css" href="./nav/nav.css">
+    <script type="">
+        $(document).ready(function () {
+            $('#nav').load('./nav/nav.html');
+        })
+    </script>
+
+    <!--  -->
+    <header id="header"></header>
+    <link rel="stylesheet" href="./header/header.css">
+    <script>
+        $(document).ready(function () {
+            $('#header').load('./header/header.html');
+        })
+    </script>
+
+    <!-- 类别  -->
+    <section id="category-header"></section>
+    <link rel="stylesheet" href="./category//site-category-head.css">
+    <script>
+        $(document).ready(function () {
+            $('#category-header').load('./category/site-category-head.html');
+        })
+    </script>
+
+
+    <!-- 右边菜单模块 -->
+    <iframe src="./components/right_menu_fixed/right_menu_fixed.html" width="84px" height="450px" frameborder="0"
+        frameborder="0" scrolling="no" style="position: fixed;top: 0; right: 0;bottom: 0; margin: auto;z-index: 1;">
+    </iframe>
+
+    <!-- 商品类别系列 -->
+    <section id="index-main">
+
+        <!-- 小米秒杀 -->
+        <article id="xiaomi-seckill">
+            <h1>小米秒杀</h1>
+            <ol id="xiaomi-seckill-ol">
+                <li id="count-down">
+                    <div class="count-down-title">14:00 场</div>
+
+                    <svg class="icon-shandian" aria-hidden="true">
+                        <use xlink:href="#icon-shandian"></use>
+                    </svg>
+                    <style type="text/css">
+                        .icon-shandian {
+                            width: 3.0em;
+                            height: 3.5em;
+                            vertical-align: -0.15em;
+                            fill: currentColor;
+                            overflow: hidden;
+                        }
+                    </style>
+
+                    <div class="count-down-desc">距离结束还有</div>
+
+                    <div id="count-down-main">
+                        <span id="day"></span> :
+                        <span id="hour"></span> :
+                        <span id="minute"></span> :
+                        <span id="second"></span>
+                    </div>
+                </li>
+                <li id="xiaomi-seckill-goods-1">
+                    <a class="xiaomi-seckill-goods-1-a" href="">
+                        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a93f5fe2afbf492d991ca9fd0a34119e.png?thumb=1&w=150&h=150&f=webp&q=90"
+                            alt="">
+                        <h3 class="xiaomi-seckill-goods-title">米家防蓝光护目镜 黑色</h3>
+                        <p class="xiaomi-seckill-goods-price">
+                            <span>89元</span>
+                            <del>99元</del>
+                        </p>
+                        <p class="xiaomi-seckill-goods-desc">轻盈舒适，护眼新体验</p>
+                    </a>
+                </li>
+                <li id="xiaomi-seckill-goods-1">
+                    <a class="xiaomi-seckill-goods-1-a" href="">
+                        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/2b151b0763e6248045e6960ee7c1f7d8.jpg?thumb=1&w=160&h=160&f=webp&q=90"
+                            alt="">
+                        <h3 class="xiaomi-seckill-goods-title">YESOUL野小兽智能健腹轮J20 智能健腹轮J20</h3>
+                        <p class="xiaomi-seckill-goods-desc">智能APP，教练在线指导，搭赠“521马甲线训练课程</p>
+                        <p class="xiaomi-seckill-goods-price">
+                            <span>269元</span>
+                            <del>399元</del>
+                        </p>
+                    </a>
+                </li>
+                <li id="xiaomi-seckill-goods-1">
+                    <a class="xiaomi-seckill-goods-1-a" href="">
+                        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/4b4ec4b8ed45e3ef06706ea84d47e9d9.png?thumb=1&w=160&h=160&f=webp&q=90"
+                            alt="">
+                        <h3 class="xiaomi-seckill-goods-title">inFace黑头仪</h3>
+                        <p class="xiaomi-seckill-goods-desc">吸净黑头 高效不伤肤</p>
+                        <p class="xiaomi-seckill-goods-price">
+                            <span>109元</span>
+                            <del>149元</del>
+                        </p>
+                    </a>
+                </li>
+                <li id="xiaomi-seckill-goods-1">
+                    <a class="xiaomi-seckill-goods-1-a" href="">
+                        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/fe3082630d8f870996292569fd2acf50.png?thumb=1&w=160&h=160&f=webp&q=90"
+                            alt="">
+                        <h3 class="xiaomi-seckill-goods-title">PGG颈椎按摩仪 黑色经典款</h3>
+                        <p class="xiaomi-seckill-goods-desc">3个按摩头 | 全身按摩| 5大模式 | 米家APP</p>
+                        <p class="xiaomi-seckill-goods-price">
+                            <span>219元</span>
+                            <del>249元</del>
+                        </p>
+                    </a>
+                </li>
+            </ol>
+        </article>
+
+
+        <!-- 手机模块 -->
+        <section id="mi-iphone-context"></section>
+        <link rel="stylesheet" type="text/css" href="./module/mi-iphone/mi-iphone.css">
+        <script>
+            $(document).ready(function () {
+                $('#mi-iphone-context').load('./module/mi-iphone/mi-iphone.html');
+            })
+        </script>
+
+        <!-- 小米家里模块 -->
+        <iframe src="./module/mi-jiadian/mi-jiadian.html" width="1226px" height="800px" frameborder="0" frameborder="0"
+            scrolling="no" style=" margin: auto;;display: block;">
+        </iframe>
+
+        <!-- 智能模块 -->
+        <iframe src="./module/mi-intelligence/mi-intelligence.html" width="1226px" height="800px" frameborder="0"
+            frameborder="0" scrolling="no" style=" margin: auto;;display: block;">
+        </iframe>
+
+        <!-- 搭配模块 -->
+        <iframe src="./module/mi-collocation/mi-collocation.html" width="1226px" height="800px" frameborder="0"
+            frameborder="0" scrolling="no" style=" margin: auto;;display: block;">
+        </iframe>
+
+
+        <!-- 配件模块 -->
+        <iframe src="./module/mi-parts/mi-parts.html" width="1226px" height="800px" frameborder="0" frameborder="0"
+            scrolling="no" style=" margin: auto;;display: block;">
+        </iframe>
+
+        <!-- 周边模块 -->
+        <iframe src="./module/mi-periphery/mi-periphery.html" width="1226px" height="800px" frameborder="0"
+            frameborder="0" scrolling="no" style=" margin: auto;;display: block;">
+        </iframe>
+
+
+
+        <!-- 小米页脚 -->
+        <section id="mi-footer"></section>
+        <link rel="stylesheet" href="./footer/footer.css">
+        <script src="./footer/footer.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#mi-footer').load('./footer/footer.html');
+            })
+        </script>
+    </section>
+
+
+
+</body>
+
+</html>
