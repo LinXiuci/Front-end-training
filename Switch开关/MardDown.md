@@ -13,7 +13,7 @@
 
 ## 图片效果：
 
-![](%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202022-03-13%20044855.png)
+![](./img.png)(https://github.com/LinXiuci/Front-end-practice/blob/main/Switch%E5%BC%80%E5%85%B3/img.png))
 
 ## 代码：
 
