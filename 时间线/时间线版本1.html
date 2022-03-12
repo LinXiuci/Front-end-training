@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>时间线</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 62.5%;
+            list-style: none;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background: #aca9bb;
+            height: 100vh;
+        }
+
+
+        .time-line {
+            width: 110rem;
+            background: #5f5c6d;
+            border-radius: 2rem;
+            padding: 2.5rem;
+            margin: 2rem auto;
+        }
+
+        .time-line>li {
+            display: flex;
+        }
+
+        .time-line .line {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            padding: 0 1.5rem;
+        }
+
+        /* 时间线的点 */
+        .time-line .line::before {
+            content: "";
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-top: 2rem;
+            border-radius: 50%;
+            background: rgb(241, 241, 241);
+        }
+
+        /* 时间线的线 */
+        .time-line .line::after {
+            content: "";
+            border: 0.1rem solid rgba(255, 255, 255, 0.548);
+            flex: 1;
+            margin: 0.8rem 0;
+        }
+
+        .time-line .container {
+            display: flex;
+            flex-flow: column;
+            width: 100%;
+        }
+
+        .time-line .content {
+            color: aliceblue;
+            border: #000 1px solid;
+            background: #303030;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 1.5rem;
+        }
+
+        .content .content-li {
+            font-size: 2rem;
+            padding: 0.2rem 1rem;
+        }
+
+        .content:hover{
+            transform: scale(1.02);
+            transition: all .5s;
+        }
+
+        .time-line .time {
+            font-size: 2.8rem;
+            padding: 1rem;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="time-line">
+        <li>
+            <div class="line"></div>
+            <section class="container">
+                <h1 class="time">2022-03-09</h1>
+                <ol class="content">
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                </ol>
+            </section>
+        </li>
+    </ul>
+    <ul class="time-line">
+        <li>
+            <div class="line"></div>
+            <section class="container">
+                <h1 class="time">2022-03-05</h1>
+                <ol class="content">
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                </ol>
+            </section>
+        </li>
+    </ul>
+
+    <ul class="time-line">
+        <li>
+            <div class="line"></div>
+            <section class="container">
+                <h1 class="time">2022-03-04</h1>
+                <ol class="content">
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                </ol>
+            </section>
+        </li>
+    </ul>
+
+    <ul class="time-line">
+        <li>
+            <div class="line"></div>
+            <section class="container">
+                <h1 class="time">2022-03-03</h1>
+                <ol class="content">
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                    <li class="content-li">时间线测试时间线测试时间线测试</li>
+                </ol>
+            </section>
+        </li>
+    </ul>
+</body>
+
+</html>
