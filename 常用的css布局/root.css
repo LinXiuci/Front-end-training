@@ -1,1 +1,119 @@
 
+:root {
+
+    --card-theme-1: #232232;
+    --card-theme-2: #171C2F;
+    --card-theme-3: #4C4B5D;
+
+
+    --icon-active: #ffffff;
+    --icon-text-1: #606578;
+    --icon-text-2: #4C4B5D;
+    --default-color: #ffffff;
+
+    /* 标题顶部间隔 */
+    --title-margin-05: 0.05rem;
+    --title-margin-10: 0.10rem;
+    --title-margin-10: 0.15rem;
+    --title-margin-20: 0.20rem;
+
+    /* 内边 */
+    --padding-05: 0.05rem;
+    --padding-10: 0.10rem;
+    --padding-15: 0.15rem;
+    --padding-20: 0.20rem;
+
+    /* 外边 */
+    --margin-05: 0.05rem;
+    --margin-10: 0.10rem;
+    --margin-10: 0.15rem;
+    --margin-20: 0.20rem;
+
+    /* 弧度 */
+    --border-radius-10: 0.10rem;
+    --border-radius-15: 0.15rem;
+    --border-radius-20: 0.20rem;
+}
+
+.dark-theme {
+    --theme: #131721;
+    --card: #1C202C;
+    --color-defalut: #ffffff;
+}
+
+.light-theme {
+    --theme: #ffffff;
+    --card: #1C202C;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-size: 0.18rem;
+    color: var(--default-color);
+    background: var(--card-theme-2);
+    font-family: SF Pro SC, SF Pro Text, SF Pro Icons, AOS Icons, PingFang SC, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+section,
+article,
+main,
+header,
+nav,
+footer,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1 {
+    font-size: 0.48rem;
+}
+
+h2 {
+    font-size: 0.40rem;
+}
+
+h3 {
+    font-size: 0.36rem;
+}
+
+h4 {
+    font-size: 0.32rem;
+}
+
+h5 {
+    font-size: 0.28rem;
+}
+
+h6 {
+    font-size: 0.24rem;
+}
+
+a {
+    color: var(--default-color);
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 0.14rem;
+}
