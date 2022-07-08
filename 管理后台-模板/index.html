@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理后台-模板</title>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body class="light-theme">
+    <section class="container">
+        <section class="style-left">
+            <div class="logo">
+                <img src="./icon/眨眼睛_winking-face.png" alt="">
+                <p class="logo-title">LOGO</p>
+            </div>
+
+            <ul class="menu">
+                <li class="menu-item active">
+                    <a href="#">
+                        <img src="./icon/应用_application.png" alt="" />
+                        <span>仪表盘</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#">
+                        <img src="./icon/用户_user.png" alt="" />
+                        <span>客户</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#">
+                        <img src="./icon/订单_order.png" alt="" />
+                        <span>订单</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <img src="./icon/圆圈_circle-four-line.png" alt="" />
+                        <span>分析</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <img src="./icon/邮件_mail.png" alt="" />
+                        <span>信息</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <img src="./icon/广告产品_ad-product.png" alt="" />
+                        <span>产品</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">
+                        <img src="./icon/注意_attention.png" alt="" />
+                        <span>警告</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="#">
+                        <img src="./icon/设置_setting.png" alt="" />
+                        <span>设置</span>
+                    </a>
+                </li>
+            </ul>
+
+
+            <div class="logout">
+                <img src="./icon/开关_power.png" alt="" />
+                <span>注销</span>
+            </div>
+
+
+
+        </section>
+
+        <main class="style-middle">
+            <section class="meter">
+                <h2>仪表盘</h2>
+                <article class="meter-container"></article>
+            </section>
+
+            <section class="order">
+                <h2>最近的订单</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>产品名称</th>
+                            <th>产品数量</th>
+                            <th>支付</th>
+                            <th>身份</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </section>
+        </main>
+
+        <section class="style-right">
+            <header class="header">
+                <div class="theme-toggle">
+                    <span class="toggle active">🌙</span>
+                </div>
+                <div class="login">
+                    <h6>
+                        嗨,
+                        <span class="login-title">林染lrr</span>
+                        <p class="login-level">管理员</p>
+                    </h6>
+                    <img class="login-img" src="./img/img9.png" alt="" />
+                </div>
+            </header>
+
+            <!-- 最近通知 -->
+            <article class="plates">
+                <h2>最近通知</h2>
+                <div class="message"></div>
+            </article>
+            <!-- 销售分析 -->
+            <article class="plates">
+                <h2>销售分析</h2>
+                <div class="sale"></div>
+            </article>
+
+        </section>
+    </section>
+</body>
+<script src="./js/自适应rem.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/render.js"></script>
+<script src="./js/order.js"></script>
+
+</html>

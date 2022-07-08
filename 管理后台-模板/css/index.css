@@ -1,0 +1,369 @@
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* ----------------- 左边 ------------- */
+.style-left {
+    width: 2rem;
+    height: 100%;
+    margin-left: 0.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    height: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin: 0 0.1rem 0 0.45rem;
+    width: 0.35rem;
+    height: 0.35rem;
+}
+
+.logo .logo-title {
+    line-height: 0.8rem;
+}
+
+.menu {
+    flex: 1;
+    position: relative;
+}
+
+.menu img {
+    margin: 0 0.1rem;
+    width: 0.22rem;
+    height: 0.22rem;
+    background: var(--color-background);
+}
+
+.menu .menu-item {
+    height: 0.5rem;
+    font-size: 0.12rem;
+}
+
+.menu-item a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-item.active {
+    background: var(--color-light);
+    color: var(--color-primary);
+    margin-left: 0.05rem;
+    border-left: 0.05rem var(--color-primary-variant) solid;
+}
+
+.menu-item:hover {
+    margin-left: 0.05rem;
+    transition: all 0.5s;
+    background: var(--color-light);
+    color: var(--color-primary);
+    border-left: 0.05rem var(--color-primary-variant) solid;
+}
+
+
+.menu-item span {
+    width: 30%;
+}
+
+
+.logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    font-size: 0.12rem;
+}
+
+.logout img {
+    margin: 0 0.1rem;
+    width: 0.22rem;
+    height: 0.22rem;
+}
+
+.logout span {
+    width: 30%;
+}
+
+
+/* ----------------- 中部 ------------- */
+.style-middle {
+    flex: 1;
+    padding: 0.25rem;
+}
+
+.style-middle h2 {
+    padding: 0 0 0.2rem 0;
+}
+
+.meter,
+.meter-img-container,
+.meter-news {
+    display: flex;
+}
+
+.meter {
+    flex-direction: column;
+}
+
+.meter-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.22rem;
+}
+
+.meter-item {
+    padding: var(--card-padding);
+    background: var(--color-white);
+    box-shadow: var(--box-shadow);
+    border-radius: 0.2rem;
+}
+
+.meter-item:hover {
+    transition: all 0.2s;
+    box-shadow: none;
+}
+
+.meter-img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 50%;
+}
+
+.meter-img-container img {
+    width: 0.25rem;
+    height: 0.25rem;
+}
+
+.meter-news {
+    padding: 0.2rem 0;
+    justify-content: space-between;
+}
+
+.meter-title {
+    font-weight: bolder;
+    padding: 0.08rem 0;
+}
+
+.meter-time {
+    font-size: 0.12rem;
+    color: var(--color-info-dark);
+}
+
+
+.order {
+    margin-top: 0.2rem;
+}
+
+
+.order table {
+    width: 100%;
+    font-size: 0.12rem;
+    text-align: center;
+    padding: var(--card-padding);
+    background: var(--color-white);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--card-border-radius);
+    transition: all 300ms ease;
+}
+
+.order table:hover {
+    transition: all 0.2s;
+    box-shadow: none;
+}
+
+
+.order table tbody td {
+    height: 0.39rem;
+    border-bottom: 1px solid var(--color-light);
+    color: var(--color-dark-variant);
+}
+
+.order table tbody tr:last-child {
+    border: none;
+}
+
+.order .primary {
+    color: var(--color-primary);
+}
+
+
+
+/* ----------------- 右边 ------------- */
+.style-right {
+    width: 3rem;
+    margin-right: 0.3rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 0.6rem;
+    user-select: none;
+    font-size: 0.14rem;
+}
+
+.theme-toggle {
+    display: flex;
+    justify-content: space-between;
+    width: 0.6rem;
+    height: 0.35rem;
+    text-align: center;
+    background: var(--color-light);
+    border-radius: 0.05rem;
+}
+
+.theme-toggle:hover {
+    transition: all 0.2s;
+    box-shadow: var(--box-shadow);
+}
+
+.toggle {
+    width: 100%;
+    font-size: 0.20rem;
+    line-height: 0.35rem;
+    color: white;
+    border-radius: 0.05rem;
+}
+
+.toggle.active {
+    background: var(--color-primary);
+}
+
+
+
+.login {
+    display: flex;
+    align-items: center;
+
+}
+
+.login-title {
+    color: var(--color-dark);
+}
+
+.login-level {
+    font-size: 0.12rem;
+    color: var(--color-info-dark);
+}
+
+.login-img {
+    width: 0.4rem;
+    height: 0.4rem;
+    margin: 0 0 0 0.2rem;
+    border-radius: 50%;
+}
+
+
+
+.plates {
+    font-size: 0.12rem;
+}
+
+.plates h2 {
+    font-size: 0.18rem;
+    margin: 0.4rem 0 0.2rem 0;
+}
+
+
+.message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 3.00rem;
+    height: 2.55rem;
+    background: var(--color-white);
+    box-shadow: var(--box-shadow);
+    border-radius: 0.2rem;
+    overflow: hidden;
+}
+
+.message:hover {
+    transition: all 0.2s;
+    box-shadow: none;
+}
+
+.user-message img {
+    margin: 0 0.1rem 0 0;
+    width: 0.35rem;
+    height: 0.35rem;
+    border-radius: 50%;
+}
+
+.user-message {
+    display: flex;
+    align-items: center;
+    padding: 0.1rem 0;
+    margin: 0.05rem;
+    width: 2.55rem;
+    height: 0.54rem;
+}
+
+.user-news span:nth-child(3) {
+    margin-top: 0.05rem;
+    display: block;
+}
+
+
+.sale {
+    user-select: none;
+}
+
+.sale-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 0.80rem;
+    margin: 0.1rem 0;
+    background: var(--color-white);
+    box-shadow: var(--box-shadow);
+    border-radius: 0.2rem;
+}
+
+.sale-item:hover {
+    transition: all 0.2s;
+    box-shadow: none;
+}
+
+
+.sale-item-bgcolor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 50%;
+}
+
+.sale-item-bgcolor img {
+    width: 0.25rem;
+    height: 0.25rem;
+    border-radius: 50%;
+}
+
+.sale-news {
+    width: 2.00rem;
+}
+
+.sale-news .sale-news-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sale-news .time {
+    margin-top: 0.05rem;
+    display: block;
+}
