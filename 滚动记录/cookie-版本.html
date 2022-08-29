@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--  -->
+    <div style="height: 1800px;"></div>
+
+    <script>
+        window.onbeforeunload = function () {
+            let scrollPositionition = 0 // 记录滚动的位置
+            if (typeof window.pageYOffset != 'undefined') {
+                scrollPosition = window.pageYOffset
+            } else if (typeof document.compatMode != 'undefined' && document.compatMode != 'BackCompat') {
+                scrollPosition = document.documentElement.scrollTop
+            } else if (typeof document.body != 'undefined') {
+                scrollPosition = document.body.scrollTop
+            }
+            document.cookie = "scrollTop=" + scrollPosition //存储滚动条位置到cookies中
+        }
+
+        window.onload = function () {
+            if (document.cookie.match(/scrollTop=([^;]+)(;|$)/) != null) {
+                var arr = document.cookie.match(/scrollTop=([^;]+)(;|$)/) //cookies中不为空，则读取滚动条位置
+                console.log('arr', arr)
+                document.documentElement.scrollTop = parseInt(arr[1])
+                document.body.scrollTop = parseInt(arr[1])
+            }
+        }
+    </script>
+</body>
+
+</html>

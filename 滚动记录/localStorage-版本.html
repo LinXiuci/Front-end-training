@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="height: 1800px;"></div>
+    <script>
+        window.onbeforeunload = function () {
+            let scrollPosition = 0 // 记录滚动的位置
+            if (typeof window.pageYOffset != 'undefined') {
+                scrollPosition = window.pageYOffset
+            } else if (typeof document.compatMode != 'undefined' && document.compatMode != 'BackCompat') {
+                scrollPosition = document.documentElement.scrollTop
+            } else if (typeof document.body != 'undefined') {
+                scrollPosition = document.body.scrollTop
+            }
+            // 记录滚动的位置
+            localStorage.setItem('scroll-top', scrollPosition)
+        }
+
+        window.onload = function () {
+            if (localStorage.getItem('scroll-top') != null) {
+                let scrollTop = localStorage.getItem('scroll-top') // 获取记录滚动的位置
+                document.documentElement.scrollTop = parseInt(scrollTop)
+                document.body.scrollTop = parseInt(scrollTop)
+            }
+        }
+    </script>
+</body>
+
+</html>
