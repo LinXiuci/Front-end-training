@@ -50,7 +50,7 @@
         // 获取导航栏的高度
         const headerHeight = header.offsetHeight
 
-        function headerScroll() {
+        function handleScroll() {
             // 获取当前的滚动条高度位置
             let currentScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             if (currentScrollTop > headerHeight) {
@@ -65,7 +65,7 @@
             oldScrollTop = document.documentElement.scrollTop || document.body.scrollTop;
         }
 
-        window.addEventListener("scroll", headerScroll)
+        window.addEventListener("scroll", handleScroll)
     </script>
 </body>
 
