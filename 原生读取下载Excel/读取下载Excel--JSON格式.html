@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/index.css" />
+    <title>js读取下载Excel -- JSON格式</title>
+  </head>
+
+  <body>
+    <section class="container">
+      <article class="footer">
+        <div>
+          <input type="file" id="file" onchange="handleFile(this.files)" />
+        </div>
+        <div>
+          <button onclick="printToExcel()">导出</button>
+        </div>
+      </article>
+    </section>
+  </body>
+  <script src="./js/读取下载Excel--JSON格式.js"></script>
+  <script>
+    //列标题，逗号隔开，每一个逗号就是隔开一个单元格
+    let columnName = 'A1,B1,C1,D1,NN,N+1'
+
+    /**
+     * @params item:遍历的成员
+     * @params item:分格的符号
+     * @explain 在 push下添加成员,下标按顺序写下即可。
+     *  */
+    function handleSplitPush(item, mark='') {
+      datalist.push({
+        A1: item.split(mark)[0],
+        B1: item.split(mark)[1],
+        C1: item.split(mark)[2],
+        D1: item.split(mark)[3],
+        NN: item.split(mark)[4],
+      })
+    }
+  </script>
+</html>
