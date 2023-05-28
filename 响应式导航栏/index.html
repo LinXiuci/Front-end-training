@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        html {
+            font-size: 100px;
+        }
+
+        html,
+        body,
+        div {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-size: 0.18rem;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 600;
+            height: 0.6rem;
+            user-select: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #212121;
+        }
+
+        ion-icon {
+            transform: translateY(20%);
+        }
+
+
+        .logo,
+        .nav {
+            margin: 0 0.3rem;
+        }
+
+        .nav-search {
+            margin: 0 0.2rem;
+            border: 1px solid;
+        }
+
+        .nav {
+            display: flex;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu li {
+            position: relative;
+            margin: 0 0.2rem;
+            list-style: none;
+        }
+
+
+        .nav-menu-name:hover {
+            color: #787878;
+        }
+
+
+        /* 下划线 */
+        .nav-menu-name::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            /* opacity: 0; */
+            border-bottom: 0.03rem solid #787878;
+            transform: scale(0, 1);
+            -webkit-transform: scale(0, 1);
+            transition: opacity 0.4s, transform 0.4s;
+            -webkit-transition: opacity 0.4s, -webkit-transform 0.4s;
+        }
+
+        /* 显示下划线 */
+        .nav-menu li:hover .nav-menu-name::before {
+            /* opacity: 1; */
+            -webkit-transform: scale(1);
+            transform: scale(1) translateY(-20%);
+        }
+
+        /* 修改子菜单位置 */
+        .nav-submenu {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -200%);
+            transition: 0.8s;
+        }
+
+        .nav-menu li:hover .nav-submenu {
+            transform: translate(-50%, 0%);
+        }
+
+
+        .nav-submenu p,
+        .nav-submenu a {
+            display: block;
+            margin: 0 0 0.05rem 0;
+            padding: 0;
+            width: 0.9rem;
+            height: 0.5rem;
+            text-align: center;
+            line-height: 0.5rem;
+            border-radius: 0.1rem;
+            border: 0.01rem solid transparent;
+        }
+
+        /* 移动到列表名时显示边框 */
+        .nav-submenu p:hover,
+        .nav-submenu a:hover {
+            border: 0.01rem solid;
+        }
+
+        /* 隐藏箭头 */
+        .nav-submenu p>span:nth-child(3),
+        .nav-submenu a>span:nth-child(3) {
+            display: none;
+        }
+
+        /* 切换按钮 */
+        .nav-toggle {
+            position: relative;
+            display: none;
+            width: 0.5rem;
+        }
+
+        .nav-toggle p,
+        .nav-toggle p::before,
+        .nav-toggle p::after {
+            content: "";
+            position: absolute;
+            width: 0.2rem;
+            height: 0.03rem;
+            background: #0f0f0f;
+        }
+
+        .nav-toggle p {
+            top: 16%;
+        }
+
+        .nav-toggle p::before {
+            top: -6px;
+        }
+
+        .nav-toggle p::after {
+            bottom: -6px;
+        }
+
+        @media all and (max-width: 768px) {
+
+            /* 去掉外边框格式 */
+            .nav {
+                margin: 0rem;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                /* 使列表（.nav-menu li）垂直居中 */
+                flex-direction: column;
+                align-items: center;
+                width: 80%;
+                height: 100vh;
+                overflow-y: scroll;
+                transition: 0.3s;
+                background: #111111;
+            }
+
+            .nav-menu li {
+                width: 80%;
+            }
+
+            /* 点击 “切换按钮” 时菜单会回到屏幕的右边*/
+            .nav-menu.active {
+                right: 0;
+            }
+
+
+            /* 改变导航名颜色 */
+            .nav-menu-name {
+                color: #787878;
+            }
+
+            /* 关闭下划线 */
+            .nav-menu-name::before {
+                border-bottom: transparent;
+                transform: none;
+                -webkit-transform: none;
+                transition: none;
+                -webkit-transition: none;
+            }
+
+            /* 关闭下划线 */
+            .nav-menu li:hover .nav-menu-name::before {
+                -webkit-transform: none;
+                transform: none;
+            }
+
+            .nav-submenu {
+                position: relative;
+                /* 固定位置，禁止 :hover （第74行代码）*/
+                transform: translate(-50%, 0%);
+                border-radius: 0.25rem;
+                background: #1D1D1D;
+            }
+
+            .nav-submenu p,
+            .nav-submenu a {
+                /* 将 文字 和 span 向两边对齐 */
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                margin: 0.2rem auto;
+                /* 关闭边框 */
+                border: 0 solid transparent !important;
+            }
+
+            .nav-submenu p>span,
+            .nav-submenu a>span {
+                margin: 0 0.3rem;
+                color: #eff1f5;
+            }
+
+            /* 隐藏icon */
+            .nav-submenu p>span:nth-child(1),
+            .nav-submenu a>span:nth-child(1) {
+                display: none;
+            }
+
+            /* 显示箭头 */
+            .nav-submenu p>span:nth-child(3),
+            .nav-submenu a>span:nth-child(3) {
+                display: inline;
+            }
+
+            /* 切换按钮 */
+            .nav-toggle {
+                display: block;
+            }
+
+            /* 显示遮罩 */
+            .nav-mask {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 25%;
+                height: 100%;
+                background: #09090cc9;
+                transition: 0.3s;
+            }
+
+            /* 点击 “切换按钮” 时遮罩会回到屏幕的左边*/
+            .nav-mask.active {
+                left: 0;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <section class="logo">
+            <a href="#">Vehchi</a>
+        </section>
+
+        <nav class="nav">
+            <!-- 导航遮罩 -->
+            <div class="nav-mask"></div>
+            <!-- search -->
+            <div class="nav-search">
+                <p>SH</p>
+            </div>
+            <!-- 切换按钮-菜单  -->
+            <div class="nav-toggle">
+                <p></p>
+            </div>
+            <ul class="nav-menu">
+                <li>
+                    <p class="nav-menu-name">博客</p>
+                    <div class="nav-submenu">
+
+                        <p>
+                            <span>
+                                <ion-icon name="home-outline"></ion-icon>
+                            </span>
+                            <span>内容</span>
+                            <span>&gt;</span>
+                        </p>
+                        <p>
+                            <span>
+                                <ion-icon name="logo-steam"></ion-icon>
+                            </span>
+                            <span>项目</span>
+                            <span>&gt;</span>
+                        </p>
+                        <p>
+                            <span>
+                                <ion-icon name="albums-outline"></ion-icon>
+                            </span>
+                            <span>归档</span>
+                            <span>&gt;</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <p class="nav-menu-name">影音</p>
+                    <div class="nav-submenu">
+                        <p>
+                            <span>
+                                <ion-icon name="image-outline"></ion-icon>
+                            </span>
+                            <span>相册</span>
+                            <span>&gt;</span>
+                        </p>
+                        <p>
+                            <span>
+                                <ion-icon name="location-outline"></ion-icon>
+                            </span>
+                            <span>足迹</span>
+                            <span>&gt;</span>
+                        </p>
+                        <a href="#">
+                            <span>
+                                <ion-icon name="logo-twitch"></ion-icon>
+                            </span>
+                            <span>哔哩</span>
+                            <span>&gt;</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <p class="nav-menu-name">作者</p>
+                    <div class="nav-submenu">
+                        <p>
+                            <span>
+                                <ion-icon name="ribbon-outline"></ion-icon>
+                            </span>
+                            <span>简介</span><span>&gt;</span>
+                        </p>
+                        <p>
+                            <span>
+                                <ion-icon name="layers-outline"></ion-icon>
+                            </span>
+                            <span>物品</span>
+                            <span>&gt;</span>
+                        </p>
+                        <p>
+                            <span>
+                                <ion-icon name="person-add-outline"></ion-icon>
+                            </span>
+                            <span>友链</span>
+                            <span>&gt;</span>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <p class="nav-menu-name">空间</p>
+                    <div class="nav-submenu">
+                        <a href="#">
+                            <span>
+                                <ion-icon name="paper-plane-outline"></ion-icon>
+                            </span>
+                            <span>速查</span>
+                            <span>&gt;</span>
+                        </a>
+                        <a href="#">
+                            <span>
+                                <ion-icon name="people-outline"></ion-icon>
+                            </span>
+                            <span>论谈</span>
+                            <span>&gt;</span>
+                        </a>
+                        <a href="#">
+                            <span>
+                                <ion-icon name="footsteps-outline"></ion-icon>
+                            </span>
+                            <span>服务</span>
+                            <span>&gt;</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+        <h1>1</h1>
+
+    </main>
+    <script>
+        // 切换按钮
+        const toggle = document.querySelector(".nav-toggle");
+        // 导航菜单
+        const navMenus = document.querySelector(".nav-menu");
+        // 导航遮罩
+        const navMask = document.querySelector(".nav-mask");
+
+        // body 元素
+        const body = document.body;
+
+        // 当屏幕到 768px 时， 切换按钮将会显示，点击即可打开菜单
+        toggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            navMenus.classList.add('active');
+            navMask.classList.add('active');
+            body.style.overflowY = "hidden"; // 禁止滚动
+        })
+
+        // 当打开菜单时， 通过点击遮罩可关闭菜单
+        navMask.addEventListener('click', (e) => {
+            e.preventDefault();
+            navMenus.classList.remove('active')
+            navMask.classList.remove('active');
+            body.style.overflowY = "auto"; // 允许滚动
+        })
+    </script>
+</body>
+
+</html>
